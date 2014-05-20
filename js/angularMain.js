@@ -1,3 +1,20 @@
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        }, wait);
+        if (immediate && !timeout) func.apply(context, args);
+    };
+};
+
+/*
+@TODO: Add debouncer to eliminate repetitive events from regex/testString changes
+ */
+
 var regexApp = angular.module('regexApp', []);
 
 regexApp.controller('RegexController', function ($scope) {
