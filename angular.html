@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bruto2NetoAngular</title>
+    <link rel="stylesheet"  href="/css/angularMain.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.8/angular.min.js"></script>
+    <script src="/js/angularMain.js"></script>
+    <style>
+    </style>
+</head>
+
+<body ng-controller="CalculatorController">
+
+    <div class="header"><h1>RegexTester</h1></div>
+
+    <div class="content">
+        <form class="regexForm">
+
+            <fieldset>
+                <h3>Your regular expression</h3>
+                / <input type="text"
+                         ng-model="regexes.prefix"
+                         ng-model-options="{updateOn: 'default blur', debounce: {default: 1000, blur: 0} }"
+                         size="50">
+                / <input type="text"
+                         ng-model="regexes.suffix"
+                         ng-model-options="{updateOn: 'default blur', debounce: {default: 1000, blur: 0} }"
+                         size="2" maxlength="2">
+                <br>
+            </fieldset>
+
+            <fieldset>
+                <h3>Your test string</h3>
+                <textarea ng-model="regexes.testString"
+                          ng-model-options="{updateOn: 'default blur', debounce: {default: 1000, blur: 0} }"
+                          rows="4" style="width: 99%"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <h3>Match results</h3>
+                <div class="matchResult">
+                    <ul>
+                        <li ng-repeat="match in matchResult">
+                            {{match}}
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+
+            <button ng-click="doRegex()">Check regex now</button>
+        </form>
+
+        <br>
+
+        <div class="result">
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <small>
+            Disclamer: This app was made under an hour as an exercice to freshen my memory and to add it to my portfolio.
+            Don't take it too seriously.
+        </small>
+    </div>
+ 
+</body>
+</html>

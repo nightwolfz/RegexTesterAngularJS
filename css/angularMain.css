@@ -1,0 +1,81 @@
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, em, img,
+small, b, i, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, article, canvas,
+fieldset, footer, header, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font: inherit;
+    font-size: 12px;
+    font-family: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
+}
+
+body {
+    background: #f3f3f3;
+}
+
+.header, .content, .footer {
+    width: 660px;
+    padding: 16px;
+    margin: 16px auto;
+    background: #fff;
+}
+
+.result {
+    border: 1px solid #eee;
+    padding: 16px;
+}
+
+h1 {
+    font-size: 4.1em;
+    font-weight: bold;
+}
+h3 {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 4px 0;
+    padding: 4px 0;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.regexForm {
+    font-size: 22px;
+}
+.regexForm input {
+    padding: 4px 16px;
+    margin-top: 10px;
+}
+textarea, .matchResult {
+    border: 1px solid #aaa;
+    padding: 4px;
+    text-align: left;
+}
+
+fieldset {
+    margin-bottom: 2em;
+}
+
+button:hover {
+    background-color: #ededed;
+    border-color: #ddd;
+    color: #333;
+}
+button {
+    background: #f6f6f6;
+    border: 1px solid #ddd;
+    color: #333;
+    font-weight: bold;
+    margin: 1em 0;
+    padding: .4em .7em;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    text-shadow: 0 1px 0 #f3f3f3;
+}
+
+ul li {
+    margin-left: 24px;
+    padding: 4px;
+    list-style: decimal;
+}
